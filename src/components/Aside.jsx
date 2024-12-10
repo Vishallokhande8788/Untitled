@@ -33,7 +33,7 @@ function Aside() {
   ];
 
   return (
-    <div className="flex min-h-screen flex-col justify-between">
+    <div className="flex min-h-full flex-col justify-between">
       {/* Contact Information */}
       <section>
         {contactInfo.map((info) => {
