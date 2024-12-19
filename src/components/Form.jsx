@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { RiSparklingFill } from "react-icons/ri";
 import Intro from "@/components/Intro";
@@ -14,6 +15,8 @@ const services = [
 ];
 
 function Form() {
+  const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
@@ -30,23 +33,28 @@ function Form() {
   const handleFormSubmit = async (data) => {
     const spamCheck = await spamDetect(data.message);
 
-    if (spamCheck.isProfanity) {
-      console.log("Shi se fill karo");
-    } else {
-      const formData = new FormData();
-      formData.append(configs.fullname, data.fullname);
-      formData.append(configs.email, data.email);
-      formData.append(configs.message, data.message);
-      formData.append(configs.services, data.services);
-
-      fetch(configs.submitUrl, {
-        method: "POST",
-        mode: "no-cors",
-        body: formData,
-      }).then(() => {
-        console.log("Form submit hogya!");
+    if (spamCheck.isProfanity)
+      return navigate("/error", {
+        state: { badWord: spamCheck.flaggedFor },
       });
-    }
+
+    const formData = new FormData();
+    formData.append(configs.fullname, data.fullname);
+    formData.append(configs.email, data.email);
+    formData.append(configs.message, data.message);
+    formData.append(configs.services, data.services);
+
+    fetch(configs.submitUrl, {
+      method: "POST",
+      mode: "no-cors",
+      body: formData,
+    }).then(() => {
+      navigate("submission", {
+        state: {
+          name: data.fullname,
+        },
+      });
+    });
   };
 
   return (
