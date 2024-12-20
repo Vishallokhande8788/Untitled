@@ -39,32 +39,32 @@ This project is created using **React** and **Vite**. It is built to help develo
 
 2. Install Tailwind CSS, PostCSS, and Autoprefixer:
    ```bash
-   npm install -D tailwindcss postcss autoprefixer
+   pnpm install -D tailwindcss postcss autoprefixer
    ```
 
 3. Initialize Tailwind CSS configuration:
    ```bash
-   npx tailwindcss init -p
+   pnpx tailwindcss init -p
    ```
  
 4. Install React Hook Form:
    ```bash
-   npm install react-hook-form
+   pnpm install react-hook-form
 
    ```
 5. Install React Router DOM:
    ```bash
-   npm install react-router-dom
+   pnpm install react-router-dom
    ```
 6. Install React Icons:
 
    ```bash
-   npm install react-icons
+   pnpm install react-icons
    ```
 
 7. Install ESLint and Prettier:
    ```bash
-   npm install eslint prettier
+   pnpm install eslint prettier
    ```
 
 
@@ -76,11 +76,11 @@ This project is created using **React** and **Vite**. It is built to help develo
   ```
 - To create a production build:
   ```bash
-  npm run build
+  pnpm run build
   ```
 - To preview the production build:
   ```bash
-  npm run preview
+  pnpm run preview
   ```
 
 
