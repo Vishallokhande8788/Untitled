@@ -1,0 +1,38 @@
+In this project, we must manage .env files properly. These files store important data like API keys, and they are not saved in GitHub or commits for security. If the .env file is missing or deleted, the project might stop working locally.
+
+However, the deployed site will keep working if .env variables are added to Cloudflare. Follow these steps to add .env variables in Cloudflare:
+
+
+**** Fore Deploy project on Cloudflare ****
+Steps to Deploy and Add .env in Cloudflare:
+1.Log in to Cloudflare.
+2.Go to Workers and Pages.
+3.Create a new Pages project.
+4.Connect your GitHub repository.
+5.Set these options:
+6.Production Branch: main
+7.Build Command: pnpm run build
+8.Build Output Directory: dist
+9.Click Deploy.
+10.Add .env Variables:
+
+**** For Sets .env Variables in Cloudflare ****
+** set Variables & Secrets **
+
+1.After deployment, go to the deployed project's Overview in Workers and Pages.
+2.Go to Settings > Variables and Secrets.
+3.Click Add:
+4.Type: Set it to Secret.
+5.Variable Name: Enter the name (e.g., API_KEY).
+6.Value: Enter the value (e.g., token, link).
+7.Save the changes.
+8.By adding .env variables to Cloudflare, your deployed project will work even if the .env file is missing locally.
+
+
+
+
+
+
+
+
+

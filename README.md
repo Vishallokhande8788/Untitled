@@ -96,6 +96,22 @@ src/
 └── main.jsx      # The entry point of the app.
 ```
 
+## Setting `.env` Variables in Cloudflare
+
+To ensure your deployed project works even if the local `.env` file is missing, you can securely set environment variables in Cloudflare. Follow these steps:
+
+### Steps to Add Variables and Secrets:
+1. After deployment, go to the deployed project's **Overview** in **Workers and Pages**.
+2. Navigate to **Settings** > **Variables and Secrets**.
+3. Click **Add**.
+4. Set the **Type** to `Secret`.
+5. Enter the **Variable Name** (e.g., `API_KEY`).
+6. Enter the **Value** (e.g., tokens, links, or IDs).
+7. Save your changes.
+
+By setting `.env` variables in Cloudflare, your deployed project will remain functional and secure, even if `.env` files are deleted or missing locally.
+
+
 ## License
 This project is licensed under the **MIT License**. See the LICENSE file for details.
 
