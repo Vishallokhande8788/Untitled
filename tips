@@ -28,7 +28,7 @@ Steps to Deploy and Add .env in Cloudflare:
 7.Save the changes.
 8.By adding .env variables to Cloudflare, your deployed project will work even if the .env file is missing locally.
 
-
+# imp process
 
 
 
