@@ -131,4 +131,3 @@ If you are new to these tools, check out these guides:
 - [ESLint Rules](https://eslint.org/docs/latest/)
 - [Prettier Setup](https://prettier.io/docs/en/)
 
-This README gives all the details needed to understand the project and start using it.
